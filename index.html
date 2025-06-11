@@ -13,12 +13,12 @@
     }
 
     header {
-      background-color: white;
-      padding: 20px 40px;
+      background-color: #FFF7E1;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 0px solid #FFC907;
     }
 
     nav a {
@@ -44,7 +44,7 @@
       background-position: center;
       color: white;
       text-align: left;
-      padding: 80px 40px;
+      padding: 150px 40px;
       position: relative;
     }
 
@@ -74,7 +74,7 @@
 
     .cta-button {
       padding: 15px 25px;
-      background-color: #84c4d8;
+      background-color: #2E9DF7;
       border: none;
       color: white;
       font-size: 1em;
@@ -84,20 +84,20 @@
     }
 
     .cta-button:hover {
-      background-color: #68b2c7;
+      background-color: #8BD1CB;
     }
 
     .footer-note {
-      padding: 30px 40px;
+      padding: 100px 40px;
       text-align: center;
       font-size: 1.1em;
-      color: #fff;
+      color: white; /* Moved inline style here */
       background: none;
       background-color: transparent;
     }
 
     .footer-note a {
-      color: #fff;
+      color: white; /* Moved inline style here */
       font-weight: bold;
       text-decoration: underline;
     }
@@ -122,15 +122,23 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Give a Little —<br> Change a Lot</h1>
-      <p>
-        Every dollar you donate provides clean water to families in need. $1 a week. 
-        100% goes to the field, and you’ll see exactly how your generosity changes lives.
+      <!-- This paragraph explains how donations help -->
+      <p style="margin-right: 100px;">
+        <!-- This paragraph explains how donations help -->
+        Every dollar you donate provides clean water to families in need. Just $1 a week can make a difference.<br>
+        100% of your donation goes to the field, and you can see how your generosity changes lives.
       </p>
-      <button class="cta-button">Give Your Change<br>Make A Change</button>
+      <button class="cta-button">Give Your Change;<br>Make a Change</button>
     </div>
-    <div class="footer-note">
-      Access to clean water and basic sanitation can save around 16,000 lives every week.<br><br>
-      <a href="#">Learn about lives changed</a>
+    <!-- Footer note with larger text and a new color -->
+    <div class="footer-note" style="font-size: 1.2em; color: #ffffff; font-family: 'Proxima Nova', Arial, sans-serif;">
+      <!-- Added margin-top to move only the text lower -->
+      <div style="margin-top: 40px;">
+        Access to clean water and basic sanitation can save around 16,000 lives every week.
+      </div>
+      <br>
+      <a href="#" style="color: #ffffff; font-family: 'Proxima Nova', Avenir, sans-serif;">Learn about lives changed</a>
+    </div>
     </div>
   </section>
 
