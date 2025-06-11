@@ -1,47 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Water | Give a Little — Change a Lot</title>
+  <style>
+    body {
+      font-family: 'Proxima Nova', Avenir;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .hero {
+      background-image: url("https://cdn2.dropmarkusercontent.com/52043/c0d81f3ffd4d369506dfdaab33049e1b90c7bdc423af54ec39402b1b2c2b93aa/Madagascar_2019_CG-0519.jpg?Expires=1749677032&Signature=Z~mfvWVve~lZfNps4-qA7Bl~tEm9l6G0YFsKTW-Weqdm0DtFN1XaHHeJtalvPWW4SRIaThvr41BaUFgDuSCg7MjozTkCrlD-7tzy6Wpv3AucnLlAWnsT9IBszyUo3hyYHZxpYoAZoGISiA3cWW2Y9OhEyx1YeMsPm99Jt5bh-W9RPG6GSJ1FWk8RlueTTzSFT~KGz-H9NQfbbYjQvbOn5f-dAJYmF4OhIjnI6b2qX8IbckRwLsDMOSPWpv~bimocjYqMkri04KodpHaQ924ujvR~bMWfXicLriFXHz1QTcRLvqgBpqq2-zjfUckeWHxM6m74QZRKdOg~4rnWq~Zl3w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ"); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: left;
+      padding: 80px 40px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      padding: 15px 25px;
+      background-color: #84c4d8;
+      border: none;
+      color: white;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #68b2c7;
+    }
+
+    .footer-note {
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #fff;
+      background: none;
+      background-color: transparent;
+    }
+
+    .footer-note a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- Navigation -->
+  <header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/30" alt="Charity Water Logo" />
+      <span><strong>charity:</strong> water</span>
+    </div>
+    <nav>
+      <a href="#">Our Impact</a>
+      <a href="#">About Us</a>
+      <a href="#">Become a Student Ambassador</a>
+    </nav>
+  </header>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Give a Little —<br> Change a Lot</h1>
+      <p>
+        Every dollar you donate provides clean water to families in need. $1 a week. 
+        100% goes to the field, and you’ll see exactly how your generosity changes lives.
+      </p>
+      <button class="cta-button">Give Your Change<br>Make A Change</button>
+    </div>
+    <div class="footer-note">
+      Access to clean water and basic sanitation can save around 16,000 lives every week.<br><br>
+      <a href="#">Learn about lives changed</a>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
 </body>
 </html>
