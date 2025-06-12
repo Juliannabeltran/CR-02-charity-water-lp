@@ -35,7 +35,7 @@
     }
 
     .logo img {
-      height: 30px;
+      height: 22px; /* Makes the logo smaller for a cleaner look */
     }
 
     .hero {
@@ -88,18 +88,53 @@
     }
 
     .footer-note {
-      padding: 100px 40px;
+      margin-top: 10px; /* This moves the whole note lower into the blank space */
+      padding: 40px;
       text-align: center;
       font-size: 1.1em;
-      color: white; /* Moved inline style here */
+      color: white;
       background: none;
       background-color: transparent;
+      font-family: 'Proxima Nova', Arial, sans-serif;
     }
 
     .footer-note a {
       color: white; /* Moved inline style here */
       font-weight: bold;
       text-decoration: underline;
+    }
+
+    /* Responsive navigation styles for beginners */
+    .menu-button {
+      display: none; /* Hide menu button on large screens */
+      background: none;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    @media (max-width: 700px) {
+      nav {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: column;
+        background-color: #FFF7E1;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 10;
+      }
+      nav.open {
+        display: flex; /* Show nav links when open */
+      }
+      .menu-button {
+        display: block; /* Show menu button on small screens */
+      }
+      header {
+        position: relative;
+      }
     }
   </style>
 </head>
@@ -108,16 +143,26 @@
   <!-- Navigation -->
   <header>
     <div class="logo">
-      <img src="https://via.placeholder.com/30" alt="Charity Water Logo" />
-      <span><strong>charity:</strong> water</span>
+      <img src="img/cw_logo-2.png" alt="Charity Water Logo" />
     </div>
-    <nav>
+    <!-- Menu button for small screens -->
+    <button class="menu-button" id="menuBtn" aria-label="Open navigation menu">☰</button>
+    <nav id="mainNav">
       <a href="#">Our Impact</a>
       <a href="#">About Us</a>
       <a href="#">Become a Student Ambassador</a>
     </nav>
   </header>
 
+  <script>
+    // This script toggles the navigation menu on small screens
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', function() {
+      mainNav.classList.toggle('open');
+    });
+  </script>
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
@@ -131,13 +176,18 @@
       <button class="cta-button">Give Your Change;<br>Make a Change</button>
     </div>
     <!-- Footer note with larger text and a new color -->
-    <div class="footer-note" style="font-size: 1.2em; color: #ffffff; font-family: 'Proxima Nova', Arial, sans-serif;">
-      <!-- Added margin-top to move only the text lower -->
-      <div style="margin-top: 40px;">
+    <div class="footer-note">
+      
+      
+      <!-- This text highlights the impact of clean water -->
+      <span style="font-size: 1.2em; font-weight: bold;">
         Access to clean water and basic sanitation can save around 16,000 lives every week.
-      </div>
+      </span>
+      
       <br>
-      <a href="#" style="color: #ffffff; font-family: 'Proxima Nova', Avenir, sans-serif;">Learn about lives changed</a>
+      
+      <a href="#" style="color: #FFC907; font-family: 'Proxima Nova', Avenir, sans-serif;">Learn about lives changed</a>
+    
     </div>
     </div>
   </section>
