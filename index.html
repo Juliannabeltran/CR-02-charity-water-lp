@@ -26,6 +26,12 @@
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      transition: color 0.3s; /* Smooth color change on hover */
+    }
+
+    nav a:hover,
+    nav a:active {
+      color: #2E9DF7; /* Blue color when hovered or clicked */
     }
 
     .logo {
@@ -41,7 +47,7 @@
     .hero {
       background-image: url("https://cdn2.dropmarkusercontent.com/52043/c0d81f3ffd4d369506dfdaab33049e1b90c7bdc423af54ec39402b1b2c2b93aa/Madagascar_2019_CG-0519.jpg?Expires=1749677032&Signature=Z~mfvWVve~lZfNps4-qA7Bl~tEm9l6G0YFsKTW-Weqdm0DtFN1XaHHeJtalvPWW4SRIaThvr41BaUFgDuSCg7MjozTkCrlD-7tzy6Wpv3AucnLlAWnsT9IBszyUo3hyYHZxpYoAZoGISiA3cWW2Y9OhEyx1YeMsPm99Jt5bh-W9RPG6GSJ1FWk8RlueTTzSFT~KGz-H9NQfbbYjQvbOn5f-dAJYmF4OhIjnI6b2qX8IbckRwLsDMOSPWpv~bimocjYqMkri04KodpHaQ924ujvR~bMWfXicLriFXHz1QTcRLvqgBpqq2-zjfUckeWHxM6m74QZRKdOg~4rnWq~Zl3w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ"); /* Replace with your image */
       background-size: cover;
-      background-position: center;
+      background-position: center top;
       color: white;
       text-align: left;
       padding: 150px 40px;
@@ -50,7 +56,7 @@
 
     .hero::after {
       content: "";
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.1); /* Less dark overlay */
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
@@ -88,7 +94,7 @@
     }
 
     .footer-note {
-      margin-top: 10px; /* This moves the whole note lower into the blank space */
+      margin-top: 100px; /* This moves the footer note text down */
       padding: 40px;
       text-align: center;
       font-size: 1.1em;
@@ -173,22 +179,21 @@
         Every dollar you donate provides clean water to families in need. Just $1 a week can make a difference.<br>
         100% of your donation goes to the field, and you can see how your generosity changes lives.
       </p>
+      <!-- Call-to-action button -->
       <button class="cta-button">Give Your Change;<br>Make a Change</button>
-    </div>
-    <!-- Footer note with larger text and a new color -->
-    <div class="footer-note">
       
-      
+      <!-- Add extra space below the button using a simple margin -->
+      <div style="height: 40px;"></div>
+        </div>
+        <!-- Footer note with larger text and a new color -->
+        <div class="footer-note">
       <!-- This text highlights the impact of clean water -->
       <span style="font-size: 1.2em; font-weight: bold;">
         Access to clean water and basic sanitation can save around 16,000 lives every week.
       </span>
-      
       <br>
-      
       <a href="#" style="color: #FFC907; font-family: 'Proxima Nova', Avenir, sans-serif;">Learn about lives changed</a>
-    
-    </div>
+        </div>
     </div>
   </section>
 
